@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Recommender</title>
+</head>
+<body>
+    <h1>Book Recommendation System</h1>
+    
+    <form action="/recommend" method="post">
+        <input type="text" name="book_title" placeholder="Enter book name...">
+        <button type="submit">Recommend</button>
+    </form>
+
+    {% if books %}
+        <h2>Recommended Books:</h2>
+        <ul>
+            {% for book in books %}
+                <li>{{ book }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+</body>
+</html>
